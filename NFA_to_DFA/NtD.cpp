@@ -11,9 +11,9 @@ set<int> move(set<int> current_states, char input){
     for(int state : current_states){
         switch(state){
             case 0:
-                next_states.insert(0);
+                next_states.insert(1);
+                //or if(input == '0' || input == '1') next_states.insert(1);
                 if(input == '0') next_states.insert(0);
-                if(input == '0' || input == '1') next_states.insert(1);
                 break;
             case 1:
                 if(input == '1') next_states.insert(1);
@@ -35,7 +35,7 @@ void convert_NFA_to_DFA(){
     int state_count = 0;
     const int NFA_ACCEPT_STATE = 1;
 
-    cout<<"----------- DFA Transition Table -----------"<<endl;
+    cout<<"\n----------- DFA Transition Table -----------"<<endl;
     cout<<"State ID\tStatus\t\tOn 0\tOn 1"<<endl;
     cout<<"--------------------------------------------"<<endl;
 
@@ -65,7 +65,7 @@ void convert_NFA_to_DFA(){
 }
 
 int main(){
-    cout << "\tNFA to DFA Converter" << endl;
+    cout << "\n\t    NFA to DFA Converter" << endl;
     convert_NFA_to_DFA();
 
     return 0;

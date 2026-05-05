@@ -30,13 +30,13 @@ bool NFA_recognizer(string s){
 }
 
 int main(){
-    cout << "\tNFA Recognizer" << endl;
+    cout << "\n\tNFA Recognizer for Language (a+b)* a b* b" << endl;
     
     string token;
     cout << "Enter the NFA String: ";
     cin >> token;
     if(NFA_recognizer(token))
-        cout << "String is accepted " << endl;
+        cout << "String is accepted!" << endl;
     else
         cout << "String is rejected " << endl;
     return 0;

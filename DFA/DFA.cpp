@@ -40,13 +40,13 @@ bool DFA_recognizer(string s){
 }
 
 int main(){
-    cout << "\tDFA Recognizer for Binary Strings Ending with '10'" << endl;
+    cout << "\n\tDFA Recognizer for Binary Strings Ending with '10'" << endl;
 
     string token;
     cout << "Enter the DFA Binary String: ";
     cin >> token;
     if(DFA_recognizer(token))
-        cout << "String is accepted" << endl;
+        cout << "String is accepted!" << endl;
     else
         cout << "String is rejected" << endl;
     return 0;
